@@ -1,0 +1,42 @@
+:root {
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #18181B;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  height: 250vh;
+  font-family: 'Roboto', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+ 
+  height: 200vh;
+  max-width: 1220px;
+  margin: auto;
+  position: relative;
+  justify-content: space-between;
+
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.barreira {
+  height: 95vh;
+  width: 448px;
+}

@@ -1,0 +1,67 @@
+.NotFixedStuff {
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s;
+}
+
+.NotFixedStuff section {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: all 0.3s;
+}
+
+.NotFixedStuff section div{
+    transition: all 0.3s;
+}
+
+.NotFixedStuff section div:hover{
+    transform: scale(1.05);
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.NotFixedStuff span {
+    transition: all 0.3s;
+    width: 546px;
+    min-height: 452px;
+    display: flex;
+    align-items: center;
+}
+
+.NotFixedStuff span h1{
+    font-size: 30px;
+    font-weight: bold;
+}
+.NotFixedStuff span h2{
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.NotFixedStuff span p{
+    color: #A1A1AA;
+
+}
+
+.tecno {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 410px;
+    min-height: 800px;
+    transition: all 0.3s;
+}
+.tecno div{
+
+    color: #A1A1AA;
+}
+
+.tecno div h2{transition: all 0.3s;}
+
+.tecno div :hover{
+    transform: scale(1.1);
+    color: white;
+}

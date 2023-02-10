@@ -1,0 +1,85 @@
+.FixedStuff{
+    position: fixed;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 95vh;
+    width: 448px;
+}
+
+.FixedStuff h1 {
+    font-size: 100px;
+    line-height: 0.32;
+}
+
+.FixedStuff h3 {
+    line-height: 0.32;
+    font-weight: 400;
+    color: #A1A1AA;
+}
+
+.FixedStuff section {
+    margin-top: 50PX;
+    display: flex;
+    flex-direction: column;
+}
+
+.FixedStuff section a {
+    color: #52525B;
+    font-weight: 700;
+    margin-top: 5px;
+    text-decoration: none;
+}
+
+.FixedStuff span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.FixedStuff span a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+span img {
+    border-radius: 50%;
+    object-fit: cover;
+    -webkit-filter: grayscale(100%);
+    padding-right: 15px;
+}
+
+span li {
+    font-size: 1.05rem;
+    line-height: 1.25rem;
+    list-style: none;
+    margin: 0px 4px;
+    
+}
+
+span li svg {
+    padding: 0px 7px;
+}
+
+#pzin {
+    text-align: center;
+    color: #494951;
+}
+div p a {
+    color: #9F9FA8;
+}
+
+.foot {  
+    margin-top: auto;
+    margin-left: 13px;
+ } 
+
+#icon {
+    color: #A1A1AA;
+ }
+
+#point {
+    margin-top: 80px;
+}
