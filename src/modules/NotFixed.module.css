@@ -1,6 +1,7 @@
 .NotFixedStuff {
     display: flex;
     flex-direction: column;
+    min-width: 280px;
     transition: all 0.3s;
 }
 
@@ -25,7 +26,7 @@
 
 .NotFixedStuff span {
     transition: all 0.3s;
-    width: 546px;
+    max-width: 546px;
     min-height: 452px;
     display: flex;
     align-items: center;
@@ -47,16 +48,16 @@
 }
 
 .tecno {
-
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 410px;
+    max-width: 410px;
     min-height: 650px;
     transition: all 0.3s;
 }
 .tecno div{
-
+    width: 100%;
     color: #A1A1AA;
 }
 
@@ -68,4 +69,10 @@
 .tecno div :hover{
     transform: scale(1.1);
     color: white;
+}
+
+@media screen and (max-width: 1125px) {
+    .tecno div {
+        margin-right: 30px;
+    }
 }

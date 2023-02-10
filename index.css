@@ -15,7 +15,7 @@
 
 body {
   height: 250vh;
-  font-family: 'Roboto', sans-serif;
+   font-family: 'Roboto', sans-serif;
 }
 
 html {
@@ -26,7 +26,7 @@ html {
   display: flex;
   flex-direction: row;
  
-  height: 200vh;
+  min-height: 200vh;
   max-width: 1220px;
   margin: auto;
   position: relative;
@@ -37,8 +37,8 @@ html {
 }
 
 .barreira {
-  height: 95vh;
-  width: 448px;
+  max-height: 95vh;
+  max-width: 448px;
 }
 
 
@@ -46,5 +46,9 @@ html {
     .container {
       flex-direction: column;
       justify-content: flex-start;
+    }
+    .barreira {
+      width: 0px;
+      height: 0px;
     }
 }
