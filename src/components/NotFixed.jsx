@@ -1,6 +1,7 @@
 import Project from './Project.jsx';
 import styles from '../modules/NotFixed.module.css'
-import { useRef, useEffect, useState } from 'react';
+import { useRef, useEffect, useState, useContext } from 'react';
+import { lugarContext } from '../App.jsx';
 
 const desc_p4 = 'Página de portfólio para apresentar a mim como desenvolvedor web, os códigos e aparência dos projetos e compartilhar mídias sociais como Linkedin e Github';
 const no_desc = 'Ainda nada aqui :)'
@@ -15,6 +16,7 @@ function NotFixed() {
     const teqi = useRef(null);
 
     const [isMouseOver, setIsMouseOver] = useState(false);
+    const { lugar, setLugar } = useContext(lugarContext);
 
     const handleMouseEnter = () => {
         setIsMouseOver(true);
@@ -29,8 +31,11 @@ function NotFixed() {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
                     handleMouseLeave();
+                    setLugar('projetos');
+
                 } else {
                     handleMouseEnter();
+                    
                 }
             });
         }, { threshold: [0.444] });
@@ -45,6 +50,7 @@ function NotFixed() {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
                     exp.current.style.opacity = '1'
+                    setLugar('experiencia');
                 } else {
                     exp.current.style.opacity = '0.5'
                 }
@@ -61,6 +67,7 @@ function NotFixed() {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
                     teqi.current.style.opacity = '1'
+                    setLugar('tecnologias');
                 } else {
                     teqi.current.style.opacity = '0.5'
                 }
@@ -75,7 +82,7 @@ function NotFixed() {
     return (
         <div id="projetos" className={styles.NotFixedStuff}>
             <section ref={projetus} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-            <Project view={isMouseOver} tech='JAVASCRIPT, REACT, CSS, JSX, HOOKS' title='Portfóilio (Essa Página)' description={desc_p4}></Project>
+                <Project view={isMouseOver} tech='JAVASCRIPT, REACT, CSS, JSX, HOOKS' title='Portfólio (Essa Página)' description={desc_p4}></Project>
                 <Project view={isMouseOver} tech='JAVASCRIPT, REACT, CSS, JSX, NEXT.JS' title='Página de Login' description={desc_p2}></Project>
                 <Project view={isMouseOver} tech='PYTHON, .TXT DATABASE, MODULES' title='Term.ooo' description={desc_p1}></Project>
                 <Project view={isMouseOver} tech='PYTHON, PROGRAMMING LOGIC' title='Jogo de Adivinhação' description={desc_p3}></Project>
@@ -84,7 +91,7 @@ function NotFixed() {
             <span ref={exp} id="experiencia">
                 <div>
                     <h1>Spigot Developer</h1>
-                    <p>Autônomo/FreeLance</p>
+                    <p>Autônomo/Freelance</p>
                     <h2>~ 1 ANO</h2>
                 </div>
             </span>

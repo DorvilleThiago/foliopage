@@ -13,6 +13,7 @@
 }
 
 .NotFixedStuff section div{
+    will-change: transform;
     transition: all 0.3s;
 }
 
@@ -51,7 +52,7 @@
     flex-direction: row;
     justify-content: space-between;
     width: 410px;
-    min-height: 800px;
+    min-height: 650px;
     transition: all 0.3s;
 }
 .tecno div{
@@ -59,7 +60,10 @@
     color: #A1A1AA;
 }
 
-.tecno div h2{transition: all 0.3s;}
+.tecno div h2{
+    will-change: transform;
+    transition: all 0.3s;
+}
 
 .tecno div :hover{
     transform: scale(1.1);

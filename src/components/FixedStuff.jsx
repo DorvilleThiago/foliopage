@@ -1,23 +1,85 @@
 import styles from '../modules/FixedStuff.module.css';
 import '/index.css';
+import { useContext, useRef, useEffect, useState } from 'react';
+import { lugarContext } from '../App.jsx';
 
 function FixedStuff() {
+
+    const { lugar, setLugar } = useContext(lugarContext);
+
+    const proj = useRef(null);
+    const experi = useRef(null);
+    const tecnolo = useRef(null);
+    const title = useRef(null);
+
+    useEffect(() => {
+        if (lugar == 'projetos' && isVisible) {
+            ImHere(proj)
+            ImNot(experi)
+            ImNot(tecnolo)
+        } else if (lugar == 'experiencia' && isVisible) {
+            ImHere(experi)
+            ImNot(proj)
+            ImNot(tecnolo)
+        } else if (lugar == 'tecnologias' && isVisible) {
+            ImHere(tecnolo)
+            ImNot(proj)
+            ImNot(experi)
+        }
+      }, [lugar]);
+
+    function ImHere(coiso) {
+            coiso.current.style.color = 'white'
+    }
+
+    function ImNot(coiso) {
+            coiso.current.style.color = '#52525B'
+    }
+
+    const [isVisible, setIsVisible] = useState(true);
+
+    useEffect(() => {
+        const mediaQuery = window.matchMedia('(max-width: 1125px)');
+
+        if (mediaQuery.matches) {
+            setIsVisible(false);
+            title.current.h1 = null;
+        }
+
+        const handleMediaQueryChange = (event) => {
+        if (event.matches) {
+            setIsVisible(false);
+        } else {
+            setIsVisible(true);
+        }
+        };
+
+        mediaQuery.addListener(handleMediaQueryChange);
+
+        return () => {
+        mediaQuery.removeListener(handleMediaQueryChange);
+        };
+    }, []);
+
+
     return (
         <div className={styles.FixedStuff}>
-            <main>
+            <main ref={title}>
                 <h1>Olá, sou</h1>
                 <h1>Thiago</h1>
                 <h3 id={styles.point}>Eu estudo Ciência da Computação na UNIT/AL e</h3>
                 <h3>estou aprendendo e construindo projetos pessoais</h3>
                 <h3>para me tornar um desenvolvedor web.</h3>
             </main>
-            <section>
-                <a href="#projetos">01 - PROJETOS</a>
-                <br />
-                <a href="#experiencia">02 - EXPERIÊNCIA</a>
-                <br />
-                <a href="#technologias">03 - TECHNOLOGIAS</a>
-            </section>
+            { isVisible ? (
+                <section>
+                    <a ref={proj} href="#projetos">01 - PROJETOS</a>
+                    <br />
+                    <a ref={experi} href="#experiencia">02 - EXPERIÊNCIA</a>
+                    <br />
+                    <a ref={tecnolo} href="#technologias">03 - TECHNOLOGIAS</a>
+                </section> ) : (<></>)
+            }
             <div className={styles.foot}>
                 <span>
                     <img src="/foto.jpg" alt="foto" height='60' width='60' />

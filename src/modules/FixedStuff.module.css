@@ -19,16 +19,24 @@
 }
 
 .FixedStuff section {
-    margin-top: 50PX;
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
+    margin-bottom: 30px;
 }
 
 .FixedStuff section a {
     color: #52525B;
     font-weight: 700;
+    font-size: 13px;
     margin-top: 5px;
     text-decoration: none;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+}
+
+.FixedStuff section :hover {
+    transform: translateX(7px);
 }
 
 .FixedStuff span {
@@ -82,4 +90,23 @@ div p a {
 
 #point {
     margin-top: 80px;
+}
+
+@media screen and (max-width: 1125px) {
+    .FixedStuff {
+        position: unset;
+    }
+
+    .FixedStuff main {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .FixedStuff h1 {
+        line-height: 0.8;
+    }
+
+    .FixedStuff h3 {
+        line-height: 0;
+    }
 }
