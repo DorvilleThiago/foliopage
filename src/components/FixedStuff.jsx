@@ -75,7 +75,7 @@ function FixedStuff() {
                     <br />
                     <a ref={experi} href="#experiencia">02 - EXPERIÊNCIA</a>
                     <br />
-                    <a ref={tecnolo} href="#technologias">03 - TECHNOLOGIAS</a>
+                    <a ref={tecnolo} href="#technologias">03 - TECNOLOGIAS</a>
                 </section> ) : (<></>)
             }
             <div className={styles.foot}>

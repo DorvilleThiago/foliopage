@@ -136,7 +136,7 @@ function NotFixed() {
                     <h2>~ 1 ANO</h2>
                 </div>
             </span>
-            { mediaQuery.matches ? (<h2 style={title}>TECHNOLOGIAS</h2>) : <></>}
+            { mediaQuery.matches ? (<h2 style={title}>TECNOLOGIAS</h2>) : <></>}
             <main ref={teqi} id="technologias" className={styles.tecno}>
                 
                 <div>
