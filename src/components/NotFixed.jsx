@@ -1,4 +1,5 @@
 import Project from './Project.jsx';
+import ProjectNoLink from './ProjectNoLink.jsx';
 import styles from '../modules/NotFixed.module.css'
 import { useRef, useEffect, useState, useContext } from 'react';
 import { lugarContext } from '../App.jsx';
@@ -125,7 +126,7 @@ function NotFixed() {
                 <Project link={"https://github.com/DorvilleThiago/React-Login"} view={isMouseOver} tech='JAVASCRIPT, REACT, CSS, JSX, NEXT.JS' title='Página de Login' description={desc_p2}></Project>
                 <Project link={"https://github.com/DorvilleThiago/Termoo-by-Thiago"} view={isMouseOver} tech='PYTHON, .TXT DATABASE, MODULES' title='Term.ooo' description={desc_p1}></Project>
                 <Project link={"https://github.com/DorvilleThiago/jogo-de-adivinhacao"} view={isMouseOver} tech='PYTHON, PROGRAMMING LOGIC' title='Jogo de Adivinhação' description={desc_p3}></Project>
-                <Project view={isMouseOver} tech='...' title='...' description={no_desc}></Project>
+                <ProjectNoLink view={isMouseOver} tech='...' title='...' description={no_desc}></ProjectNoLink>
             </section>
             <span ref={exp} id="experiencia">
                 <div>
