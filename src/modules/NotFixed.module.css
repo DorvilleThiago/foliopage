@@ -1,7 +1,7 @@
 .NotFixedStuff {
     display: flex;
     flex-direction: column;
-    min-width: 280px;
+    min-width: 240px;
     transition: all 0.3s;
 }
 
@@ -56,7 +56,7 @@
     min-height: 650px;
     transition: all 0.3s;
 }
-.tecno div{
+.tecno div {
     width: 100%;
     color: #A1A1AA;
 }
@@ -72,7 +72,22 @@
 }
 
 @media screen and (max-width: 1125px) {
+
     .tecno div {
         margin-right: 30px;
     }
+
+    .tecno {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .NotFixedStuff section {
+        margin-top: 60px;
+    }
+
+    .NotFixedStuff span {
+        min-height: 300px;
+    }
+
 }

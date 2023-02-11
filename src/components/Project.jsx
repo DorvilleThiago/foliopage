@@ -3,6 +3,10 @@ import { useRef, useEffect, useState } from 'react';
 
 function Project(props) {
 
+    function sendToPage(link) {
+        window.open(link, '_blank');
+    }
+
     const divzinha = useRef(null)  
     const h2zinho = useRef(null)  
     const h1zinho = useRef(null)  
@@ -62,7 +66,7 @@ function Project(props) {
     }
 
     return (
-        <div ref={divzinha} style={geral} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+        <div onClick={() => window.open(props.link , "_blank")} ref={divzinha} style={geral} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
             <h2 ref={h2zinho} style={tech}>{props.tech} </h2>
             <h1 ref={h1zinho} style={title}>{props.title}</h1>
             <p ref={pzinho} style={text}>{props.description}</p>

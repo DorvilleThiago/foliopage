@@ -11,11 +11,17 @@ const desc_p3 = 'Mini-projeto da universidade requisitada pelo professor Matheus
 
 function NotFixed() {
 
+    function sendToPage(link) {
+        window.open(link, '_blank');
+    }
+
     const projetus = useRef(null);
     const exp = useRef(null);
     const teqi = useRef(null);
 
+    const [width, setWidth] = useState(window.innerWidth);
     const [isMouseOver, setIsMouseOver] = useState(false);
+    const [showTitle, setShowTitle] = useState(false);
     const { lugar, setLugar } = useContext(lugarContext);
 
     const handleMouseEnter = () => {
@@ -26,14 +32,38 @@ function NotFixed() {
         setIsMouseOver(false);
     };
 
-        useEffect(() => {
+    const title = {
+        fontSize: '16px',
+        letterSpacing: '1px',
+    }
+    const mediaQuery = window.matchMedia('(max-width: 1125px)');
+
+    useEffect(() => {
+    const handleResize = () => setWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+    useEffect(() => {
+        if (width < 1125) {
+        setShowTitle(true);
+        } else {
+        setShowTitle(false);
+        }
+    }, [width]);
+
+    useEffect(() => {
+            const mediaQuery = window.matchMedia('(max-width: 1125px)');
             const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
+                entries.forEach((entry) => {
+                    if (mediaQuery.matches) {
+                    handleMouseLeave();
+                }
+                else if (entry.isIntersecting) {
                     handleMouseLeave();
                     setLugar('projetos');
 
-                } else {
+                    } else {
                     handleMouseEnter();
                     
                 }
@@ -45,10 +75,14 @@ function NotFixed() {
             };
         }, []);
     
-        useEffect(() => {
+    useEffect(() => {
+            const mediaQuery = window.matchMedia('(max-width: 1125px)');
             const observer2 = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
+                entries.forEach((entry) => {
+                if (mediaQuery.matches) {
+                    exp.current.style.opacity = '1'
+                }
+                else if (entry.isIntersecting) {
                     exp.current.style.opacity = '1'
                     setLugar('experiencia');
                 } else {
@@ -62,17 +96,21 @@ function NotFixed() {
             };
         }, []);
     
-        useEffect(() => {
+    useEffect(() => {
+            const mediaQuery = window.matchMedia('(max-width: 1125px)');
             const observer3 = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
+                entries.forEach((entry) => {
+                if (mediaQuery.matches) {
+                    teqi.current.style.opacity = '1'
+                }
+                else if (entry.isIntersecting) {
                     teqi.current.style.opacity = '1'
                     setLugar('tecnologias');
                 } else {
                     teqi.current.style.opacity = '0.5'
                 }
             });
-        }, { threshold: [0.62] });
+        }, { threshold: [1] });
             observer3.observe(teqi.current);
             return () => {
             observer3.disconnect();
@@ -82,33 +120,38 @@ function NotFixed() {
     return (
         <div id="projetos" className={styles.NotFixedStuff}>
             <section ref={projetus} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-                <Project view={isMouseOver} tech='JAVASCRIPT, REACT, CSS, JSX, HOOKS' title='Portfólio (Essa Página)' description={desc_p4}></Project>
-                <Project view={isMouseOver} tech='JAVASCRIPT, REACT, CSS, JSX, NEXT.JS' title='Página de Login' description={desc_p2}></Project>
-                <Project view={isMouseOver} tech='PYTHON, .TXT DATABASE, MODULES' title='Term.ooo' description={desc_p1}></Project>
-                <Project view={isMouseOver} tech='PYTHON, PROGRAMMING LOGIC' title='Jogo de Adivinhação' description={desc_p3}></Project>
+                { mediaQuery.matches ? (<h2 style={title}>PROJETOS</h2>) : <></>}
+                <Project link={"https://github.com/DorvilleThiago/foliopage"} view={isMouseOver} tech='JAVASCRIPT, REACT, CSS, JSX, HOOKS' title='Portfólio' description={desc_p4}></Project>
+                <Project link={"https://github.com/DorvilleThiago/React-Login"} view={isMouseOver} tech='JAVASCRIPT, REACT, CSS, JSX, NEXT.JS' title='Página de Login' description={desc_p2}></Project>
+                <Project link={"https://github.com/DorvilleThiago/Termoo-by-Thiago"} view={isMouseOver} tech='PYTHON, .TXT DATABASE, MODULES' title='Term.ooo' description={desc_p1}></Project>
+                <Project link={"https://github.com/DorvilleThiago/jogo-de-adivinhacao"} view={isMouseOver} tech='PYTHON, PROGRAMMING LOGIC' title='Jogo de Adivinhação' description={desc_p3}></Project>
                 <Project view={isMouseOver} tech='...' title='...' description={no_desc}></Project>
             </section>
             <span ref={exp} id="experiencia">
                 <div>
+                { mediaQuery.matches ? (<h2 style={title}>EXPERIÊNCIA</h2>) : <></>}
                     <h1>Spigot Developer</h1>
                     <p>Autônomo/Freelance</p>
                     <h2>~ 1 ANO</h2>
                 </div>
             </span>
+            { mediaQuery.matches ? (<h2 style={title}>TECHNOLOGIAS</h2>) : <></>}
             <main ref={teqi} id="technologias" className={styles.tecno}>
+                
                 <div>
-                    <h2>Html</h2> 
-                    <h2>Css</h2>
-                    <h2>Jsx</h2>
+                    
                     <h2>JavaScript</h2>
                     <h2>TypeScript</h2>
+                    <h2>Python</h2>
+                    <h2>CSS</h2>
+                    <h2>JSX</h2>
                 </div>
                 <div>
                     <h2>React</h2>
                     <h2>Next.js</h2>
-                    <h2>React Native</h2>
-                    <h2>Python</h2>
+                    <h2>Html</h2> 
                     <h2>Java</h2>
+                    <h2>ReactNative</h2>
                 </div>
             </main>
         </div>

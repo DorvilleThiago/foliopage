@@ -5,16 +5,19 @@
     flex-direction: column;
     height: 95vh;
 
-    min-width: 280px;
+    min-width: 240px;
     width: 448px;
 }
 
-.FixedStuff h1 {
+
+.FixedStuff main h1 {
+    margin: 40px 0px;
+    margin-bottom: 20px;
     font-size: 100px;
-    line-height: 0.32;
+    line-height: 1;
 }
 
-.FixedStuff h3 {
+.FixedStuff main h3 {
     line-height: 1.25;
     font-size: 17px;
     font-weight: 400;
@@ -97,7 +100,7 @@ div p a {
  }
 
 #point {
-    margin-top: 80px;
+    margin-top: 0px;
 }
 
 @media screen and (max-width: 1125px) {
@@ -116,12 +119,13 @@ div p a {
     }
 
     .FixedStuff main h1 {
-        line-height: 0.7;
+        margin-top: 30px;
+        line-height: 1;
         font-size: 65px;
     }
 
     .FixedStuff main h3 {
-        line-height: 1;
+        line-height: 1.4;
         word-wrap: break-word;
         white-space: normal;
     }
@@ -135,6 +139,7 @@ div p a {
         margin-top: 20px;
         margin-left: 0px;
     }
+
     #pzin {
         text-align: left;
         color: #494951;
@@ -145,6 +150,28 @@ div p a {
         padding-top: 10px;
     }
     .FixedStuff span img {
-        margin-left: 10px;
+        margin-left: 0px;
+    }
+    .FixedStuff span li {
+        margin: 0px 0px;
+        
+    }
+    .FixedStuff span li svg {
+        padding-left: 0px;
+    }
+    #icon {
+        padding-left: 7px;
+    }
+    @media screen and (max-width: 355px) {
+        .FixedStuff main h1 {
+            line-height: 1;
+            font-size: 60px;
+        }
+    }
+
+    @media screen and (max-width: 372px) {
+        #pzin {
+            font-size: 13px;
+        }
     }
 }
