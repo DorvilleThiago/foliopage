@@ -59,15 +59,13 @@ function NotFixed() {
                 entries.forEach((entry) => {
                     if (mediaQuery.matches) {
                     handleMouseLeave();
-                }
-                else if (entry.isIntersecting) {
+                    }
+                    else if (entry.isIntersecting) {
                     handleMouseLeave();
                     setLugar('projetos');
-
                     } else {
                     handleMouseEnter();
-                    
-                }
+                    }
             });
         }, { threshold: [0.444] });
             observer.observe(projetus.current);
@@ -103,6 +101,7 @@ function NotFixed() {
                 entries.forEach((entry) => {
                 if (mediaQuery.matches) {
                     teqi.current.style.opacity = '1'
+                    console.log("a")
                 }
                 else if (entry.isIntersecting) {
                     teqi.current.style.opacity = '1'
@@ -111,7 +110,7 @@ function NotFixed() {
                     teqi.current.style.opacity = '0.5'
                 }
             });
-        }, { threshold: [1] });
+            }, { threshold: [0.9] });
             observer3.observe(teqi.current);
             return () => {
             observer3.disconnect();
