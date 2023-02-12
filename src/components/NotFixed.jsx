@@ -36,6 +36,7 @@ function NotFixed() {
     const title = {
         fontSize: '16px',
         letterSpacing: '1px',
+        color: 'white'
     }
     const mediaQuery = window.matchMedia('(max-width: 1125px)');
 
@@ -80,12 +81,15 @@ function NotFixed() {
                 entries.forEach((entry) => {
                 if (mediaQuery.matches) {
                     exp.current.style.opacity = '1'
+                    exp.current.style.color = 'var(--yellow)'
                 }
                 else if (entry.isIntersecting) {
                     exp.current.style.opacity = '1'
+                    exp.current.style.color = 'var(--yellow)'
                     setLugar('experiencia');
                 } else {
                     exp.current.style.opacity = '0.5'
+                    exp.current.style.color = 'var(--white)'
                 }
             });
         }, { threshold: [1] });
@@ -139,7 +143,6 @@ function NotFixed() {
             <main ref={teqi} id="technologias" className={styles.tecno}>
                 
                 <div>
-                    
                     <h2>JavaScript</h2>
                     <h2>TypeScript</h2>
                     <h2>Python</h2>

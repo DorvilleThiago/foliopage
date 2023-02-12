@@ -13,33 +13,35 @@ function ProjectNoLink(props) {
     const handleMouseEnter = () =>{
         setTimeout(function () {
             
-            divzinha.current.style.backgroundColor = '#27272A';
-            h2zinho.current.style.color = 'white';
-            h1zinho.current.style.color = 'white';
-            pzinho.current.style.color = '#A1A1AA';
+            divzinha.current.style.backgroundColor = 'var(--dark)';
+            h2zinho.current.style.color = 'var(--yellow)';
+            h1zinho.current.style.color = 'var(--yellow)';
+            pzinho.current.style.color = 'white';
           }, 0.1);
 
     };
     const handleMouseLeave = () =>{
 
         setTimeout(function() {
-            divzinha.current.style.backgroundColor = '#1F1F23';
-            h2zinho.current.style.color = '#858588';
-            h1zinho.current.style.color = '#858588';
-            pzinho.current.style.color = '#5C5C63';
+            divzinha.current.style.backgroundColor = 'var(--darker)';
+            h2zinho.current.style.color = '#A1A1AA';
+            h1zinho.current.style.color = '#A1A1AA';
+            pzinho.current.style.color = '#A1A1AA';
           }, 0.1);
 
       };
 
-    const geral = {
-        backgroundColor: view ? '#27272A' : '#1F1F23',
+      const geral = {
+        backgroundColor: view ? 'var(--dark)' : 'var(--darker)',
         padding: '15px 23px',
-        transition: 'all 0.3s'
+        transition: 'all 0.3s',
+        borderRadius: '15px',
+        boxShadow: 'rgba(0, 0, 0, 0.50) 0px -50px 36px -28px inset'
     };
       
     const tech = {
-        color: view ? '#ffffff' : '#858588',
-        fontSize: '13px',
+        color: view ? 'var(--yellow)' : '#A1A1AA',
+        fontSize: '14px',
         fontWeight: 'bold',
         marginBottom: '25px',
         transition: 'all 0.3s',
@@ -47,13 +49,13 @@ function ProjectNoLink(props) {
     }
     
     const title = {
-        color: view ? '#ffffff' : '#858588',
+        color: view ? 'white' : '#A1A1AA',
         fontSize: '30px',
         transition: 'all 0.3s'
     }
     
     const text = {
-        color: view ? '#A1A1AA' : '#5C5C63',
+        color: view ? 'white' : '#A1A1AA',
         fontSize: '14px',
         marginTop: '30px',
         maxWidth: '500px',

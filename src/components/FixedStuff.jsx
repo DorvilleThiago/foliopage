@@ -29,11 +29,11 @@ function FixedStuff() {
       }, [lugar]);
 
     function ImHere(coiso) {
-            coiso.current.style.color = 'white'
+            coiso.current.style.color = 'var(--yellow)'
     }
 
     function ImNot(coiso) {
-            coiso.current.style.color = '#52525B'
+            coiso.current.style.color = 'white'
     }
 
     const [isVisible, setIsVisible] = useState(true);

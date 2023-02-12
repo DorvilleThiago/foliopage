@@ -2,10 +2,19 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #18181B;
+  --yellow: #e7c359;
+  --lessyellow: #bda459;
+  --orange: #d48849;
+  --red: #bd4545;
+  --purple: #6d1950;
+  --dark: #20073a;
+  --darker: #120422;
 
+  color-scheme: light dark;
+  color: 	#ffffff;
+
+  background: rgb(32,7,58);
+  background: linear-gradient(90deg, rgba(32,7,58,1) 38%, #D63A3A 100%);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -53,4 +62,10 @@ html {
       width: 0px;
       height: 0px;
     }
+@media screen and (max-width: 700px) {
+  :root {
+  background: #D63A3A;
+  background: radial-gradient(circle, #D63A3A 0%, rgba(32,7,58,1) 100%);
+  }
+}
 }

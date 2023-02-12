@@ -76,7 +76,7 @@
 }
 .tecno div {
     width: 100%;
-    color: #A1A1AA;
+    color: white;
 }
 
 .tecno div h2{
@@ -86,7 +86,7 @@
 
 .tecno div :hover{
     transform: scale(1.1);
-    color: rgb(255, 255, 255);
+    color: var(--yellow);
 }
 
 @media screen and (max-width: 1125px) {
