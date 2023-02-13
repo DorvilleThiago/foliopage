@@ -74,7 +74,7 @@
 .foot {  
     margin-top: auto;
     display: flex;
-    margin-left: 23px;
+    margin-left: 10px;
     flex-direction: column;
  } 
 
@@ -87,9 +87,9 @@
 }
 
 .FixedStuff span img {
-    min-width: 60px;
-    min-height: 60px;
-    border-radius: 50%;
+    min-width: 85px;
+    min-height: 85px;
+    border-radius: 0%;
     object-fit: cover;
     padding-right: 15px;
 }
