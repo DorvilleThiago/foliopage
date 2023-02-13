@@ -50,7 +50,7 @@
     margin-top: 50px;
     display: flex;
     flex-direction: column;
-    margin-bottom: 30px;
+    margin-bottom: 125px;
 }
 
 .FixedStuff section a {
@@ -59,23 +59,30 @@
     margin-top: 5px;
     text-decoration: none;
     letter-spacing: 1px;
-    transition: all 0.3s;
+    transition: all 0.4s;
 }
 
 .FixedStuff section a:hover {
     transform: translateX(7px);
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.218);
+    padding-left: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
 }
 
 .FixedStuff span {
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 10px;
 }
 .foot {  
     margin-top: auto;
     display: flex;
     margin-left: 10px;
     flex-direction: column;
+    margin-bottom: 30px;
  } 
 
 .FixedStuff span a {
@@ -87,13 +94,13 @@
 }
 
 .FixedStuff span img {
-    min-width: 85px;
-    min-height: 85px;
+    width: 100px;
+    height: 100px;
     border-radius: 0%;
     object-fit: cover;
-    padding-right: 15px;
+  
+    
 }
-
 .FixedStuff span li {
     font-size: 1.05rem;
     line-height: 1.25rem;
@@ -108,8 +115,11 @@
 
 #pzin {
     text-align: center;
-    margin-left: 85px;
+    margin-left: 112px;
     color: white;
+    width: 300px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.144);
 }
 div p a {
     color: var(--yellow);
@@ -164,6 +174,12 @@ div p a {
     #pzin {
         text-align: left;
         margin-left: 0px;
+        border-radius: 15px;
+        background-color: unset;
+    }
+
+    .FixedStuff span {
+        height: unset;
     }
     .FixedStuff span li {
         display: flex;
