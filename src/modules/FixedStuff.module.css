@@ -108,6 +108,7 @@
 
 #pzin {
     text-align: center;
+    margin-left: 85px;
     color: white;
 }
 div p a {
@@ -162,6 +163,7 @@ div p a {
 
     #pzin {
         text-align: left;
+        margin-left: 0px;
     }
     .FixedStuff span li {
         display: flex;
