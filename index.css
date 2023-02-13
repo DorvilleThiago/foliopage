@@ -9,12 +9,8 @@
   --purple: #6d1950;
   --dark: #20073a;
   --darker: #120422;
-
   color-scheme: light dark;
   color: 	#ffffff;
-
-  background: rgb(32,7,58);
-  background: linear-gradient(90deg, rgba(32,7,58,1) 38%, #D63A3A 100%);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -24,7 +20,11 @@
 
 body {
   height: 250vh;
-   font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
+
+  background: linear-gradient(50deg,var(--dark)30%, var(--red));
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 html {
@@ -64,8 +64,9 @@ html {
     }
 @media screen and (max-width: 700px) {
   :root {
-  background: #D63A3A;
-  background: radial-gradient(circle, #D63A3A 0%, rgba(32,7,58,1) 100%);
+    background: linear-gradient(50deg,var(--dark)15%, var(--red));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
   }
 }
 }
