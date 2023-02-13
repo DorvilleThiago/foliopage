@@ -3,6 +3,10 @@ import '/index.css';
 import { useContext, useRef, useEffect, useState } from 'react';
 import { lugarContext } from '../App.jsx';
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDiagramProject, faFire, faMicrochip } from "@fortawesome/free-solid-svg-icons";
+
+
 function FixedStuff() {
 
     const { lugar, setLugar } = useContext(lugarContext);
@@ -71,11 +75,11 @@ function FixedStuff() {
             {
                 isVisible ? (
                 <section>
-                    <a ref={proj} href="#projetos">01 - PROJETOS</a>
+                        <a ref={proj} href="#projetos">01 - PROJETOS <FontAwesomeIcon icon={faDiagramProject} /></a> 
                     <br />
-                    <a ref={experi} href="#experiencia">02 - EXPERIÊNCIA</a>
+                        <a ref={experi} href="#experiencia">02 - EXPERIÊNCIA <FontAwesomeIcon icon={faFire} /></a>
                     <br />
-                    <a ref={tecnolo} href="#technologias">03 - TECNOLOGIAS</a>
+                    <a ref={tecnolo} href="#technologias">03 - TECNOLOGIAS <FontAwesomeIcon icon={faMicrochip}/></a>
                 </section> ) : (<></>)
             }
             <div className={styles.foot}>

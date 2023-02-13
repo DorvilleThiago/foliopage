@@ -62,7 +62,7 @@
     transition: all 0.3s;
 }
 
-.FixedStuff section :hover {
+.FixedStuff section a:hover {
     transform: translateX(7px);
 }
 
