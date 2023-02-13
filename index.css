@@ -62,11 +62,4 @@ html {
       width: 0px;
       height: 0px;
     }
-@media screen and (max-width: 700px) {
-  :root {
-    background: linear-gradient(50deg,var(--dark)15%, var(--red));
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-  }
-}
 }
