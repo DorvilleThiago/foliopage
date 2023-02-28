@@ -106,11 +106,11 @@
     line-height: 1.25rem;
     list-style: none;
     margin: 0px 4px;
-    
 }
 
 .FixedStuff span li svg {
     padding: 0px 7px;
+    margin-bottom: 2px;
 }
 
 #pzin {
