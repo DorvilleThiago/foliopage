@@ -149,12 +149,12 @@ function NotFixed() {
                     <h2>TypeScript</h2>
                     <h2>Python</h2>
                     <h2>CSS</h2>
-                    <h2>JSX</h2>
+                    <h2>Tailwind</h2>
                 </div>
                 <div>
                     <h2>React</h2>
                     <h2>Next.js</h2>
-                    <h2>Html</h2> 
+                    <h2>HTML</h2> 
                     <h2>Java</h2>
                     <h2>ReactNative</h2>
                 </div>
