@@ -9,7 +9,7 @@ const no_desc = 'Ainda nada aqui :)'
 const desc_p6 = 'Este é um projeto de um dicionário em português que utiliza a API REST do site https://dicionario-aberto.net para buscar os significados das palavras. O objetivo é permitir aos usuários obter significados precisos das palavras'
 const desc_p1 = 'Recriação do jogo "Termo" no terminal python utilizando arquivos .txt para salvar dados de partidas de jogadores'
 const desc_p2 = 'Prática de estilização de páginas no framework Next.js utilizando métodos de estilização reutilizáveis (In-line CSS, Modules, Styled Components)'
-const desc_p3 = 'Mini-projeto da universidade requisitada pelo professor Matheus Lobo, consiste de um jogo de adivinhação em que o jogador deve adivinhar um valor de 1 a 100, o sistema dá dicas mostrando quais foram os extremos já adivinhados.'
+const desc_p3 = 'Página para uma ONG de cachorros fictícia. A página tem como objetivo apresentar informações sobre a organização, seus objetivos e missão, além de fornecer informações sobre adoção de cachorros e formas de ajudar a ONG, seja por meio de doações ou de trabalho voluntário.'
 const desc_p5 = 'Animefy é um clone da interfáce do "Spotify" com tema de animes, ele possui um sistema de player de músicas, design responsivo para dispositivos móveis, opção de pausar, alterar volume e tempo da música.'
 function NotFixed() {
 
@@ -126,10 +126,10 @@ function NotFixed() {
         <div id="projetos" className={styles.NotFixedStuff}>
             <section ref={projetus} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                 {mediaQuery.matches ? (<h2 style={title}>PROJETOS</h2>) : <></>}
+                <Project link={"https://dorvillethiago.github.io/dogs-page/"} view={isMouseOver} tech='JAVASCRIPT, REACT, TAILWIND, MATERIAL UI, RESPONSIVE DESIGN' title='ONG Cathioros!' description={desc_p3}></Project>
                 <Project link={"https://dorvillethiago.github.io/Dicionario/"} view={isMouseOver} tech='TYPESCRIPT, XML, API REST, REACT, TAILWIND, RESPONSIVE DESIGN' title='Dicionário Web' description={desc_p6}></Project>
                 <Project link={"https://dorvillethiago.github.io/Animefy/"} view={isMouseOver} tech='JAVASCRIPT, REACT, CSS, JSX, RESPONSIVE DEISGN, AUDIO OBJECTS' title='Spotify Clone' description={desc_p5}></Project>
                 <Project link={"https://github.com/DorvilleThiago/foliopage"} view={isMouseOver} tech='JAVASCRIPT, REACT, CSS, JSX, RESPONSIVE DESIGN' title='Portfólio' description={desc_p4}></Project>
-                <Project link={"https://github.com/DorvilleThiago/React-Login"} view={isMouseOver} tech='JAVASCRIPT, REACT, CSS, JSX, NEXT.JS' title='Página de Login' description={desc_p2}></Project>
                 <Project link={"https://github.com/DorvilleThiago/Termoo-by-Thiago"} view={isMouseOver} tech='PYTHON, .TXT DATABASE, MODULES' title='Term.ooo' description={desc_p1}></Project>
                 
             </section>
